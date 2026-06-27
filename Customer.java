@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Customer extends User {
     private String customerID;
@@ -33,6 +34,7 @@ public class Customer extends User {
         return membershipStatus;
     }
 
+    /* 
     public void viewHistoryBooking() {
         System.out.println("\n--- Booking History for " + getName() + " (ID: " + customerID + ") ---");
         if (reservations.isEmpty()) {
@@ -45,6 +47,7 @@ public class Customer extends User {
             System.out.println(reservations.get(i).toString());
         }
     }
+    */
 
     public void addReservation(Reservation reservation) {
         this.reservations.add(reservation);
@@ -55,7 +58,6 @@ public class Customer extends User {
                 ", Customer ID: " + customerID + ", Membership: " + membershipStatus;
     }
 
-    public void manageRooms() {
-        
+    public static void processHistoryView(ArrayList<Customer> customersList, Scanner input) {
     }
 }

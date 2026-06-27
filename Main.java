@@ -34,40 +34,19 @@ public class Main {
             if (inputAdminID.equals(adminAkaun.getAdminID()) && adminAkaun.login(adminAkaun.getUsername(), inputPassword)) {
                 System.out.println("\nLogin Successful! Welcome Back, " + adminAkaun.getName());
                 
-                adminMenu(input, adminAkaun, reservationObj, roomObj); 
+                adminMenu(input, adminAkaun, reservationObj, roomObj, customerList); 
             } else {
                 System.out.println("\n[Error] Invalid Admin ID or Password!");
             }
 
         } else if (identity == 2) {
-            System.out.println("\n--- CUSTOMER LOGIN ---");
-            System.out.print("Please enter Username: ");
-            String inputUsername = input.nextLine();
-            
-            System.out.print("Please enter Password: ");
-            String inputPassword = input.nextLine();
-
-            Customer loggedInCustomer = null;
-            for (Customer c : customerList) {
-                if (c.login(inputUsername, inputPassword)) {
-                    loggedInCustomer = c; 
-                    break;
-                }
-            }
-
-            if (loggedInCustomer != null) {
-                System.out.println("\nLogin Successful! Welcome, " + loggedInCustomer.getName());
-                
-                customerMenu(input, loggedInCustomer, roomObj, reservationObj, paymentObj); 
-            } else {
-                System.out.println("\n[Error] Invalid Username or Password!");
-            }
+            customerMenu(input, roomObj, reservationObj, paymentObj, customerList);
         }
         
         input.close();
     }
 
-    public static void adminMenu(Scanner input, Administrator admin, Reservation reservationObj, Room roomObj) {
+    public static void adminMenu(Scanner input, Administrator admin, Reservation reservationObj, Room roomObj, ArrayList<Customer> customersList) {
         boolean menuNum = true;
 
         while (menuNum) {
@@ -108,7 +87,7 @@ public class Main {
         }
     }
 
-    public static void customerMenu(Scanner input, Customer customer, Room roomObj, Reservation reservationObj, Payment paymentObj) {
+    public static void customerMenu(Scanner input, Room roomObj, Reservation reservationObj, Payment paymentObj, ArrayList<Customer> customersList) {
         boolean menuNum = true;
 
         while (menuNum) {
@@ -131,9 +110,10 @@ public class Main {
                 
                 case 2:
                     reservationObj.makeReservation(); 
+                    break;
                 
                 case 3:
-                    customer.viewHistoryBooking();
+                    AddOnService.processAddOnRequest(customersList, input);
                     break;
                 
                 case 4:
@@ -141,7 +121,7 @@ public class Main {
                     break;
 
                 case 5:
-                    customer.viewHistoryBooking();
+                    Customer.processHistoryView(customersList, input);
                     break;
 
                 case 6:
