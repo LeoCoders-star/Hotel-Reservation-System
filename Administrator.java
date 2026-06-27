@@ -46,23 +46,23 @@ public class Administrator extends User {
                 ", Authenticated: " + isAuthenticated;
     }
 
-    public void manageRooms() {
+    public void manageRooms(Room roomObj) {
 
     }
 
-    public void makeBooking() {
+    public void makeBooking(Reservation reservationObj) {
 
     }
 
-    public void viewHistoryBooking() {
+    public void viewHistoryBooking(Reservation reservationObj) {
 
     }
 
-    public void cancelBooking() {
+    public void cancelBooking(Reservation reservationObj) {
 
     }
 
     public void generateReport() {
-        
+
     }
 }
