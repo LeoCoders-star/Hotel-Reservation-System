@@ -66,9 +66,88 @@ public class Main {
     }
 
     public static void adminMenu(Scanner input, Administrator admin) {
+        boolean menuNum = true;
+
+        while (menuNum) {
+            int menuOption;
+            System.out.print("\nADMIN MENU SECTION");
+            System.out.print("\n1. Manage Rooms");
+            System.out.print("\n2. Make a Booking");
+            System.out.print("\n3. View History Booking");
+            System.out.print("\n4. Cancel Booking");
+            System.out.print("\n5. Generate Report Summary");
+
+            System.out.print("Select an option: ");
+            menuOption = input.nextInt();
+
+            switch (menuOption) {
+                case 1:
+                    admin.manageRooms();
+                    break;
+                
+                case 2:
+                    admin.makeBooking();
+                    break;
+                
+                case 3:
+                    admin.viewHistoryBooking();
+                    break;
+                
+                case 4:
+                    admin.cancelBooking();
+                    break;
+
+                case 5:
+                    admin.generateReport();
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
 
     public static void customerMenu(Scanner input, Customer customer) {
-        
+        /* 
+        boolean menuNum = true;
+
+        while (menuNum) {
+            int menuOption;
+            System.out.print("\nADMIN MENU SECTION");
+            System.out.print("\n1. Manage Rooms");
+            System.out.print("\n2. Make a Booking");
+            System.out.print("\n3. View History Booking");
+            System.out.print("\n4. Cancel Booking");
+            System.out.print("\n5. Generate Report Summary");
+
+            System.out.print("Select an option: ");
+            menuOption = input.nextInt();
+
+            switch (menuOption) {
+                case 1:
+                    customer.manageRooms();
+                    break;
+                
+                case 2:
+                    admin.makeBooking();
+                    break;
+                
+                case 3:
+                    admin.viewHistoryBooking();
+                    break;
+                
+                case 4:
+                    admin.cancelBooking();
+                    break;
+
+                case 5:
+                    admin.generateReport();
+                    break;
+
+                default:
+                    break;
+            }
+        }*/
     }
+        
 }

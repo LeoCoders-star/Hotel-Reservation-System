@@ -54,4 +54,8 @@ public class Customer extends User {
         return "ID: " + getPersonID() + ", Name: " + getName() +
                 ", Customer ID: " + customerID + ", Membership: " + membershipStatus;
     }
+
+    public void manageRooms() {
+        
+    }
 }

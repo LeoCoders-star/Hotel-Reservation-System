@@ -45,4 +45,24 @@ public class Administrator extends User {
                 ", Admin ID: " + adminID + ", Role: " + adminRole +
                 ", Authenticated: " + isAuthenticated;
     }
+
+    public void manageRooms() {
+
+    }
+
+    public void makeBooking() {
+
+    }
+
+    public void viewHistoryBooking() {
+
+    }
+
+    public void cancelBooking() {
+
+    }
+
+    public void generateReport() {
+        
+    }
 }
