@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Customer
+comment1.params=personID\ name\ phoneNumber\ username\ password\ customerID\ membershipStatus
+comment1.target=Customer(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getRole()
+comment3.params=name\ phoneNumber
+comment3.target=void\ setCustomerInfo(java.lang.String,\ java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getCustomerID()
+comment5.params=
+comment5.target=java.lang.String\ getMembershipStatus()
+comment6.params=
+comment6.target=void\ viewHistoryBooking()
+comment7.params=reservation
+comment7.target=void\ addReservation(Reservation)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=customersList\ input
+comment9.target=void\ processHistoryView(java.util.ArrayList,\ java.util.Scanner)
+numComments=10

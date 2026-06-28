@@ -34,7 +34,7 @@ public class Customer extends User {
         return membershipStatus;
     }
 
-    /* 
+    
     public void viewHistoryBooking() {
         System.out.println("\n--- Booking History for " + getName() + " (ID: " + customerID + ") ---");
         if (reservations.isEmpty()) {
@@ -47,7 +47,6 @@ public class Customer extends User {
             System.out.println(reservations.get(i).toString());
         }
     }
-    */
 
     public void addReservation(Reservation reservation) {
         this.reservations.add(reservation);
