@@ -6,6 +6,15 @@ public class Room
     private double pricePerNight;
     private boolean availability;
 
+    public Room()
+    {
+        roomNumber = " " ;
+        roomType = " " ;
+        capacity = 0;
+        pricePerNight = 0.0;
+        availability = true;
+    }
+    
     // Normal Constructor
     public Room(String roomNumber, String roomType, int capacity, double pricePerNight, boolean availability)
     {
