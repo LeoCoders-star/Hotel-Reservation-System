@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=StandardRoom
+comment1.params=roomNumber\ roomType\ capacity\ pricePerNight\ availability\ bedType
+comment1.target=StandardRoom(java.lang.String,\ java.lang.String,\ int,\ double,\ boolean,\ java.lang.String)
+comment2.params=bedType
+comment2.target=void\ setBedType(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getBedType()
+comment4.params=
+comment4.target=double\ calculatePrice()
+comment5.params=
+comment5.target=java.lang.String\ getRoomDetails()
+numComments=6
