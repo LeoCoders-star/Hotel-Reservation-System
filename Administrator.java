@@ -47,7 +47,7 @@ public class Administrator extends User {
     }
 
     public void manageRooms(Room roomObj) {
-
+        System.out.print("TEST");
     }
 
     public void makeBooking(Reservation reservationObj) {
